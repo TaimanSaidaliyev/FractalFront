@@ -132,4 +132,9 @@ export default class ProjectManagementService {
         const response = await axios.delete(BACK_HOST + `/api/project_management/project/skills/item/project_position/${position_id}/${skill_id}/`)
         return response
     }
+
+    static async setUpProject() {
+        const response = await axios.put(BACK_HOST + `/api/project_management/project/skills/item/project_position/user/`)
+        return response
+    }
 }

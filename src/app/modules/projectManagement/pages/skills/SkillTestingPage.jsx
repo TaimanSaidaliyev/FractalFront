@@ -60,7 +60,10 @@ export const SkillTestingPage = () => {
                                 </Tab.Pane>
                             )}
                         </Tab.Content>
-                        <button className='btn btn-sm btn-primary'>Отправить</button>
+                        <a href='/pm/result/'>
+                            <button className='btn btn-sm btn-primary'>Отправить</button>
+                        </a>
+                        
                         <button className='btn btn-sm btn-light ms-2'>Отменить</button>
                     </Col>
                     <Col sm={1}>
