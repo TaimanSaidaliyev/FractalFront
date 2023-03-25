@@ -8,6 +8,7 @@ import { TaskkAddForm } from './pages/task/TaskkAddForm'
 import { SkillSettings } from './pages/skills/SkillSettings/SkillSettings'
 import { KnowlegeBase } from './pages/skills/KnowlegeBase/KnowlegeBase'
 import { SkillResult } from './pages/skills/SkillResult'
+import { KnowlegeBaseTesting } from './pages/skills/KnowlegeBase/KnowlegeBaseTesting'
 
 const store = createStore(reducer)
 
@@ -23,6 +24,8 @@ export default function ProjectPage() {
                     <Route path='/task/:project_id/add_task' element={<TaskkAddForm />}/>
                     <Route path='/:project_id/skill/settings' element={<SkillSettings />}/>
                     <Route path='/knowlegebase/:id' element={<KnowlegeBase />}/>
+                    <Route path='/knowlegebase' element={<KnowlegeBase />}/>
+                    <Route path='/knowlegebase/testing' element={<KnowlegeBaseTesting />}/>
                 </Routes>
             </Provider>
         </div>

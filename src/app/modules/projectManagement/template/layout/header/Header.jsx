@@ -26,8 +26,8 @@ const Header = () => {
         <Link to='/pm'>
           <img
             alt='Logo'
-            className='h-25px logo mt-4 me-10'
-            src={toAbsoluteUrl('/media/logos/logo-1.svg')}
+            className='h-35px logo mt-4 me-10'
+            src={toAbsoluteUrl('/media/logos/logo_light-mode_v2.png')}
           />
         </Link>
         <MenuInner />

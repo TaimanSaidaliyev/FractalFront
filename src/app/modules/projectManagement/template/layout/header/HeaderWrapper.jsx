@@ -41,7 +41,7 @@ export function HeaderWrapper() {
         {!aside.display && (
           <div className='d-flex align-items-center flex-grow-1 flex-lg-grow-0'>
             <Link to='/pm' className='d-lg-none'>
-              <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo-2.svg')} className='h-30px' />
+              <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo_light-mode_v2.png')} className='h-35px' />
             </Link>
           </div>
         )}
@@ -50,7 +50,7 @@ export function HeaderWrapper() {
         {aside.display && (
           <div className='d-flex align-items-center flex-grow-1 flex-lg-grow-0'>
             <Link to='/pm' className='d-lg-none'>
-              <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo-2.svg')} className='h-30px' />
+              <img alt='Logo' src={toAbsoluteUrl('/media/logos/logo_light-mode_v2.png')} className='h-35px' />
             </Link>
           </div>
         )}

@@ -59,6 +59,17 @@ export const SkillSettingsQuestionEdit = ({id}) => {
                     <span className='fw-bolder'>Рекомендация к изучению вопроса</span>
                     <textarea rows={5} className='form-control' value={questionValue.recommendation}/>
                 </div>
+                <div className='mt-3'>
+                    <span className='fw-bolder'>Статья из базы знаний</span>
+                    <select className='form-control' value={3}>
+                        <option value={1}>Что такое React</option>
+                        <option value={3}>Redux и с чем его едят</option>
+                        <option>JavaScript и с чем его едят</option>
+                        <option>Python имеет большую стандартную библиотеку</option>
+                        <option>Windows, macOS</option>
+                        <option>Декларативный подход</option>
+                    </select>
+                </div>
             </div>
         </>
     )

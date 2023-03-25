@@ -1,7 +1,6 @@
 import { MenuItem } from '../../../../../../../_metronic/layout/components/header/MenuItem'
 import { MenuInnerWithSub } from '../../../../../../../_metronic/layout/components/header/MenuInnerWithSub'
 import {useIntl} from 'react-intl'
-import { Button } from 'react-bootstrap'
 
 export function MenuInner() {
     const intl = useIntl()
@@ -141,11 +140,12 @@ export function MenuInner() {
             {/* PAGES */}
             
             <MenuItem
-            icon='/media/icons/duotune/general/gen051.svg'
-            to='/apps/user-management/users'
-            title='User management'
+                icon='/media/icons/duotune/general/gen051.svg'
+                to='/pm/1/skill/settings'
+                title='Настройки'
             />
         </MenuInnerWithSub>
+        <MenuItem title='База знаний' to='/pm/knowlegebase' />
         </>
     )
 }
