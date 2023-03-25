@@ -62,4 +62,74 @@ export default class ProjectManagementService {
         const response = await axios.get(BACK_HOST + `/api/project_management/project/skills/questions/`)
         return response
     }
+
+    static async getAllQuestions(skill_id) {
+        const response = await axios.get(BACK_HOST + `/api/project_management/project/skills/questions_list/filter/${skill_id}`)
+        return response
+    }
+
+    static async deleteQuestion(id) {
+        const response = await axios.delete(BACK_HOST + `/api/project_management/project/skills/questions_list/${id}/`)
+        return response
+    }
+
+    static async getQuestion(id) {
+        const response = await axios.get(BACK_HOST + `/api/project_management/project/skills/questions_list/${id}/`)
+        return response
+    }
+
+    static async postQuestion(id, body, questionRecommendation) {
+        const response = await axios.post(BACK_HOST + `/api/project_management/project/skills/questions_list/filter/${id}/`, {title: body, recommendation: questionRecommendation})
+        return response
+    }
+
+    static async postAnswer(id, body) {
+        const response = await axios.post(BACK_HOST + `/api/project_management/project/skills/questions/answer/${id}/`, {title: body})
+        return response
+    }
+
+    static async deleteAnswer(id) {
+        const response = await axios.delete(BACK_HOST + `/api/project_management/project/skills/questions/answer/${id}/`)
+        return response
+    }
+
+    static async getSkillList() {
+        const response = await axios.get(BACK_HOST + `/api/project_management/project/skills/list/`)
+        return response
+    }
+
+    static async deleteSkill(id) {
+        const response = await axios.delete(BACK_HOST + `/api/project_management/project/skills/item/${id}/`)
+        return response
+    }
+
+    static async setSkill(id, title) {
+        const response = await axios.post(BACK_HOST + `/api/project_management/project/skills/item/position/${id}/`, {title: title})
+        return response
+    }
+
+    static async getPositionList() {
+        const response = await axios.get(BACK_HOST + `/api/project_management/project/skills/item/project_position/list/`)
+        return response
+    }
+
+    static async deletePosition(position_id) {
+        const response = await axios.delete(BACK_HOST + `/api/project_management/project/skills/item/project_position/${position_id}/`)
+        return response
+    }
+
+    static async addPosition(project_id, title, access_lvl) {
+        const response = await axios.post(BACK_HOST + `/api/project_management/project/skills/item/project_position/add/${project_id}/`, {title: title, access_lvl: access_lvl})
+        return response
+    }
+
+    static async addSkillToPosition(position_id, skill_id) {
+        const response = await axios.post(BACK_HOST + `/api/project_management/project/skills/item/project_position/${position_id}/${skill_id}/`)
+        return response
+    }
+
+    static async deleteSkillToPosition(position_id, skill_id) {
+        const response = await axios.delete(BACK_HOST + `/api/project_management/project/skills/item/project_position/${position_id}/${skill_id}/`)
+        return response
+    }
 }

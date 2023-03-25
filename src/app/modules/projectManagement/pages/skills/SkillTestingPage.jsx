@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+import TimerWidget from '../../../../components/common/TimerWidget';
 
 
 export const SkillTestingPage = () => {
@@ -26,29 +27,6 @@ export const SkillTestingPage = () => {
 
     return (
         <div className='text-start'>
-            {/* {questions && questions.map((item, index)=>
-                <>
-                    <div className={index === 0 ? '' : 'mt-10'}>
-                        <span className={index === 1 ? 'text-primary fs-3' : 'text-primary fs-3 mt-10'} key={item.id}>{item.title}</span>
-                    </div>
-                    
-                    <div>
-                        {item && item.questions.map((item_sub_1)=>
-                            <div className='mt-5'>
-                                <span className='fw-bolder h4'>{item_sub_1.title}</span>
-                                {item_sub_1 && item_sub_1.answers.map((item_sub_2)=>
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="radio" name={item_sub_1.id} id={item_sub_2.id}/>
-                                        <label class="form-check-label" for={item_sub_2.id}>
-                                            {item_sub_2.title}
-                                        </label>
-                                    </div>
-                                )}
-                            </div>
-                        )}
-                    </div>
-                </>
-            )} */}
             <div className='mb-5'>
                 <p className='fw-bolder fs-4'>Тестирование на должность <span className='text-primary'>{position}</span></p>
             </div>
@@ -56,13 +34,13 @@ export const SkillTestingPage = () => {
             <Tab.Container id="left-tabs-example" defaultActiveKey="1">
                 <Row>
                     <Col sm={2}>
-                        <Nav variant="pills" className="flex-column">
+                        <Nav variant="pills" className="flex-column cursor-pointer">
                             {questions && questions.map((item, index)=>
                                 <Nav.Link eventKey={item.id}>{item.title}</Nav.Link>
                             )}
                         </Nav>
                     </Col>
-                    <Col sm={10}>
+                    <Col sm={9}>
                         <Tab.Content>
                             {questions && questions.map((item, index)=>
                                 <Tab.Pane eventKey={item.id}>
@@ -82,9 +60,15 @@ export const SkillTestingPage = () => {
                                 </Tab.Pane>
                             )}
                         </Tab.Content>
+                        <button className='btn btn-sm btn-primary'>Отправить</button>
+                        <button className='btn btn-sm btn-light ms-2'>Отменить</button>
+                    </Col>
+                    <Col sm={1}>
+                        <TimerWidget time={45}/>
                     </Col>
                 </Row>
                 </Tab.Container>
+                
         </div>
     )
 }

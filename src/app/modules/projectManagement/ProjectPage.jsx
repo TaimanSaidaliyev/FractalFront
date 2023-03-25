@@ -5,6 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { reducer } from '../../store'
 import { TaskkAddForm } from './pages/task/TaskkAddForm'
+import { SkillSettings } from './pages/skills/SkillSettings/SkillSettings'
 
 const store = createStore(reducer)
 
@@ -17,6 +18,7 @@ export default function ProjectPage() {
                     <Route index element={<TaskHierarchyList />}/>
                     <Route path='/task/:project_id/:task_id' element={<TaskDetail />}/>
                     <Route path='/task/:project_id/add_task' element={<TaskkAddForm />}/>
+                    <Route path='/:project_id/skill/settings' element={<SkillSettings />}/>
                 </Routes>
             </Provider>
         </div>

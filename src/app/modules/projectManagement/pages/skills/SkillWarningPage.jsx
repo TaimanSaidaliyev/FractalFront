@@ -13,7 +13,6 @@ export const SkillTestPage = () => {
         const response = await ProjectManagementService.getQuestions()
         setQuestions(response.data.project_position.skills)
         setAccessLvl(response.data.project_position.access_lvl)
-        console.log(response.data.project_position.skills)
     })
 
     useEffect(()=>{
