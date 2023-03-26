@@ -108,9 +108,9 @@ export function MenuInner() {
             {/* PAGES */}
             
             <MenuItem
-            icon='/media/icons/duotune/general/gen051.svg'
-            to='/apps/user-management/users'
-            title='User management'
+                icon='/media/icons/duotune/general/gen051.svg'
+                to='/pm/profile'
+                title='Мой профайл'
             />
         </MenuInnerWithSub>
 

@@ -124,7 +124,7 @@ export const SkillProfile = () => {
                             <RadarChart
                                 captions={captions}
                                 data={data}
-                                size={250}
+                                size={220}
                             />
                         </div>
                         <div className="col-md-8">
