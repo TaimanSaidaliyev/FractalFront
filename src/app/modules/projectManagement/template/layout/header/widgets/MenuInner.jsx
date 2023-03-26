@@ -142,7 +142,12 @@ export function MenuInner() {
             <MenuItem
                 icon='/media/icons/duotune/general/gen051.svg'
                 to='/pm/1/skill/settings'
-                title='Настройки'
+                title='Настройки грейдирования'
+            />
+            <MenuItem
+                icon='/media/icons/duotune/general/gen051.svg'
+                to='/pm/1/skill/'
+                title='Настройки проекта'
             />
         </MenuInnerWithSub>
         <MenuItem title='База знаний' to='/pm/knowlegebase' />

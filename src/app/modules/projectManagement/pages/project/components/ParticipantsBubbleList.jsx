@@ -7,7 +7,7 @@ export const ParticipantsBubbleList = (props) => {
     const navigate = useNavigate()
 
     const redirectToProfile = (user_id) => {
-        return navigate(`/profile/${user_id}`)
+        return navigate(`/pm/profile/`)
     }
 
     return (

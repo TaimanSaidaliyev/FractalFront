@@ -5,17 +5,20 @@ import Tab from 'react-bootstrap/Tab';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-export const KnowlegeBase = () => {
+export const KnowlegeBase = ({start}) => {
     const parameters = useParams()
     const [favorite, setFavorite] = useState({react: false, redux: false, javascript: false})
 
     return (
         <div className='p-5'>
-        <Tab.Container id="left-tabs-example" defaultActiveKey={parameters.id}>
+        <Tab.Container id="left-tabs-example" defaultActiveKey={start ? '0' : parameters.id}>
             <Row>
                 <Col sm={2}>
                 <Nav variant="pills" className="flex-column">
                     <input className='form-control mb-4 me-2' placeholder='Поиск...'/>
+                    <Nav.Item>
+                        <Nav.Link eventKey="0" className='cursor-pointer'>Главная страница</Nav.Link>
+                    </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="1" className='cursor-pointer'>React</Nav.Link>
                     </Nav.Item>
@@ -62,6 +65,29 @@ export const KnowlegeBase = () => {
                 </Col>
                 <Col sm={8}>
                     <Tab.Content>
+                        <Tab.Pane eventKey="0">
+                            <div className='text-center'>
+                                <p className='h1'>База знаний</p>
+                            </div>
+                            <div className='text-start'>
+                                <div className='d-flex justify-content-start w-100 mt-5 mb-10'>
+                                    <div className='d-flex w-800px'>
+                                        <div className='d-flex mt-3 me-4 fs-4 text-primary fw-bolder'>
+                                            <i class="bi bi-search me-3 mt-1 fs-4"></i>
+                                            Поиск
+                                        </div>
+                                        <input className='form-control' placeholder='Введите '/>
+                                    </div>
+                                </div>
+                                <p>База знаний — это онлайн-библиотека для самообслуживания, в которой хранится информация о продукте, услуге, отделе или теме.</p>
+                                <br/>
+                                <p>Данные могут поступать в базу знаний откуда угодно. Обычно базу знаний пополняют и расширяют авторы, хорошо разбирающиеся в конкретных областях. Содержимое может варьироваться от входящих и исходящих документов отдела кадров или юридического отдела до объяснения работы продукта. База знаний может содержать ответы на часто задаваемые вопросы, справочники, руководства по устранению неисправностей, перечни процедур и другую информацию, необходимую команде.</p>
+                                <br/>
+                                <p>Многие базы знаний строятся на основе искусственного интеллекта, который может взаимодействовать с пользователем и реагировать на его запросы. Другие базы знаний являются просто упорядоченными справочниками. Существуют также машиночитаемые базы знаний, содержимое которых предназначено для считывания системой. Решения основываются на так называемом автоматизированном дедуктивном выводе. Когда пользователь вводит запрос, программное обеспечение помогает конкретизировать решение.</p>
+                                
+
+                            </div>
+                        </Tab.Pane>
                         <Tab.Pane eventKey="1">
                             <div className='mb-5'>
                                 <span className="h1">
@@ -164,7 +190,7 @@ export const KnowlegeBase = () => {
                                 </div>    
                             }
                             <div className='text-center'>
-                                <a href='/pm/' target='blank'>
+                                <a href='/pm/knowlegebase/testing' target='blank'>
                                     <button className='btn btn-sm btn-primary text-center'>
                                         Начать тестирование
                                     </button>

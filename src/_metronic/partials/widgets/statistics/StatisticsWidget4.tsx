@@ -62,7 +62,7 @@ const StatisticsWidget4: React.FC<Props> = ({className, svgIcon, color, change, 
         <div
           ref={chartRef}
           className='statistics-widget-4-chart card-rounded-bottom'
-          style={{height: '150px'}}
+          style={{height: '80px'}}
         ></div>
       </div>
       {/* end::Body */}
@@ -81,7 +81,7 @@ function getChartOptions(
   return {
     series: [
       {
-        name: 'Net Profit',
+        name: 'Задач',
         data: [40, 40, 30, 30, 35, 35, 50],
       },
     ],
@@ -117,7 +117,7 @@ function getChartOptions(
       colors: [baseColor],
     },
     xaxis: {
-      categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug'],
+      categories: ['Фев', 'Март', 'Апр', 'Май', 'Июн', 'Июл', 'Авг'],
       axisBorder: {
         show: false,
       },
@@ -182,7 +182,7 @@ function getChartOptions(
       },
       y: {
         formatter: function (val) {
-          return '$' + val + ' thousands'
+          return val + ' задач'
         },
       },
     },

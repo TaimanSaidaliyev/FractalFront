@@ -12,9 +12,9 @@ export const SecondBlock = (props) => {
             <span className={`${profile.status && profile.status.color} fw-bolder ms-5`}>
                 {profile.status && profile.status.title}
             </span>
-            <span className="ms-4">
+            {/* <span className="ms-4">
                 <i className="bi bi-pencil-fill fs-3 text-muted"></i>
-            </span>
+            </span> */}
             <div className="row mt-5">
                 <div className="col-sm-4 fs-5 fw-bolder">
                     Департамент:
@@ -71,14 +71,14 @@ export const SecondBlock = (props) => {
                     {profile.education && profile.education}
                 </div>
             </div>
-            <div className="row mt-5">
+            {/* <div className="row mt-5">
                 <div className="col-sm-4 fs-5 fw-bolder">
                     О себе:
                 </div>
                 <div className="col-sm-8 fs-5">
                     {profile.bio && profile.bio}
                 </div>
-            </div>
+            </div> */}
             <div className="row mt-5">
                 <div className="col-sm-4 fs-5 fw-bolder">
                     Сертификаты:
